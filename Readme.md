@@ -19,3 +19,10 @@ let <some var name> = WebServer::new(String::from("<hostaddress:port>"));
 <some var name>.wait_for_request(); //event handler that waits for requests
 ```
 
+
+If you want to denote your own public directory use this :
+
+```rust
+let <some var name> = WebServer::new_with_path(String::from("<hostaddress:port>"), String::from("<path to public dir>"));
+<some var name>.wait_for_request(); //event handler that waits for requests
+```
