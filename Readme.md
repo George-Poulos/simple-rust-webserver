@@ -10,11 +10,12 @@ To run, go into the git directory and run this command :
     cargo run --example <name of example file>
 
 
-To start a webserver, include the lib in your main .rs file
+To start a webserver in your own file, include the lib in your main .rs file
 
 Then type : 
 
-    ```rust
-    let <some var name> = WebServer::new(String::from("<hostaddress:port>"));
-    <some var name>.wait_for_request(); //event handler that waits for requests
-    ```
+```rust
+let <some var name> = WebServer::new(String::from("<hostaddress:port>"));
+<some var name>.wait_for_request(); //event handler that waits for requests
+```
+
