@@ -1,0 +1,8 @@
+[package]
+name = "simple_web_server"
+version = "0.1.0"
+authors = ["ConditionalCoder <Georgepoulos5@gmail.com>"]
+
+[lib]
+name = "simple_web_server"
+path = "src/main.rs"

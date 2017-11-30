@@ -6,4 +6,7 @@ This repo served as a learning experience for the rust language and attempts to 
 To run, go into the git directory and run this command : 
 
 
-    rustc webserver.rs
+    cargo build
+    cargo run --example <name of example file>
+
+
