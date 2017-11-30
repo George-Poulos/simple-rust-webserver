@@ -13,7 +13,7 @@ use std::env;
 #[derive(Clone)]
 pub struct WebServer {
     host: String,
-    public_path: String,
+    pub public_path: String,
 }
 
  /**
@@ -43,8 +43,9 @@ impl WebServer {
             match stream {
                 Ok(stream) => {
                     let self_clone2 = self.clone();
-                    let child = thread::spawn(move || { self_clone2.handle_request(&stream); });
-                    child.join().expect("joining child thread");
+                    thread::spawn(move || { 
+                        self_clone2.handle_request(&stream); 
+                    });
                 }
                 Err(e) => {
                     println!("Connection Failed! -> {}", e);
@@ -87,4 +88,8 @@ impl WebServer {
         resp_code.push_str(&contents);
         stream.write_all(resp_code.as_bytes()).unwrap();
     }
+}
+
+fn main(){
+
 }
