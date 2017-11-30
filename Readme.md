@@ -14,6 +14,7 @@ To start a webserver, include the lib in your main .rs file
 
 Then type : 
 
-
+    ```rust
     let <some var name> = WebServer::new(String::from("<hostaddress:port>"));
     <some var name>.wait_for_request(); //event handler that waits for requests
+    ```
